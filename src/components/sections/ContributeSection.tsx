@@ -237,24 +237,35 @@ export function ContributeSection() {
     setSolInput(val)
   }
 
-  function handleContribute() {
-    if (!publicKey) { setVisible(true); return }
-    if (!canContribute || isProcessing) return
-    if (solInput > RAISE_CONFIG.MAX_PER_WALLET_SOL) return
-    const depositAmount = solInput
-    const walletStr = publicKey.toString()
-    contribute.contribute(depositAmount).then(() => {
-      window.fetch('/api/referral', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          walletAddress:  walletStr,
-          depositSOL:     depositAmount,
-          referredByCode: referredByCode || undefined,
-        }),
-      }).then(() => setShowReferral(true))
-    })
+function handleContribute() {
+  if (!publicKey) { setVisible(true); return }
+  if (!canContribute || isProcessing) return
+  if (solInput > RAISE_CONFIG.MAX_PER_WALLET_SOL) return
+
+  const requiredSol = solInput + 0.002
+  if (
+    typeof balance === 'number' &&
+    Number.isFinite(balance) &&
+    requiredSol > balance
+  ) {
+    return
   }
+
+  const depositAmount = solInput
+  const walletStr = publicKey.toString()
+
+  contribute.contribute(depositAmount).then(() => {
+    window.fetch('/api/referral', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        walletAddress: walletStr,
+        depositSOL: depositAmount,
+        referredByCode: referredByCode || undefined,
+      }),
+    }).then(() => setShowReferral(true))
+  })
+}
 
   const statusMessages: Record<string, string> = {
     checking_tier:     'Checking your tier position...',
@@ -579,16 +590,20 @@ export function ContributeSection() {
               {/* CTA button */}
               <button
                 onClick={handleContribute}
-                disabled={isProcessing || exceedsMax}
+                disabled={
+  isProcessing ||
+  exceedsMax ||
+  (typeof balance === 'number' && solInput + 0.002 > balance)
+}
                 className={cn(
                   'w-full py-4 rounded-lg font-syne font-black text-base uppercase tracking-wide border-none transition-all',
                   isProcessing || exceedsMax
                     ? 'bg-green/20 text-green/40 cursor-not-allowed'
                     : !publicKey
                       ? 'bg-green text-black hover:opacity-90 cursor-pointer'
-                      : canContribute
-                        ? 'bg-green text-black hover:opacity-90 cursor-pointer'
-                        : 'bg-green/10 text-green/30 cursor-not-allowed'
+                      : canContribute && solInput + 0.002 <= (balance ?? 0)
+                      ? 'bg-green text-black hover:opacity-90 cursor-pointer'
+                      : 'bg-green/10 text-green/30 cursor-not-allowed'
                 )}
               >
                 {isProcessing
@@ -601,9 +616,11 @@ export function ContributeSection() {
                         ? 'Check the box above to continue'
                         : belowAbsMin
                           ? `Minimum contribution is ${RAISE_CONFIG.MIN_SOL} SOL`
-                          : belowTierMin
-                            ? `Contribute ${solInput} SOL at base rate — ${alloc.total.toLocaleString()} FIT`
-                            : `Contribute ${solInput} SOL — ${alloc.total.toLocaleString()} FIT`}
+                          : (typeof balance === 'number' && solInput + 0.002 > balance)
+  ? `Low balance — you have ${balance.toFixed(4)} SOL`
+  : belowTierMin
+    ? `Contribute ${solInput} SOL at base rate — ${alloc.total.toLocaleString()} FIT`
+    : `Contribute ${solInput} SOL — ${alloc.total.toLocaleString()} FIT`}
               </button>
 
               <p className="text-center text-xs text-muted font-mono mt-3">
