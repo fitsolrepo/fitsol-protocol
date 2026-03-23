@@ -7,6 +7,7 @@ import { useWalletModal } from '@solana/wallet-adapter-react-ui'
 import { ENTITY, SOCIAL_LINKS } from '@/lib/constants'
 import { shortenAddress } from '@/lib/solana'
 import { connection } from '@/lib/solana'
+import Image from 'next/image'
 
 // Team link removed — team profiles published Q2 2026 alongside KYC completion
 const NAV = [
@@ -127,10 +128,21 @@ export function Navbar() {
   return (
     <nav className="flex items-center justify-between px-6 md:px-10 h-16 border-b border-border sticky top-0 bg-black/94 backdrop-blur-md z-50">
 
-      {/* Logo */}
+      {/* Logo 
       <Link href="/" className="font-syne font-black text-xl no-underline shrink-0">
         Fit<span className="text-green">SOL</span>
-      </Link>
+      </Link>*/}
+      <Link href="/logo.png" className="shrink-0 flex items-center">
+  <Image
+    src="/logo.png"
+    alt="FitSOL"
+    width={140}
+    height={40}
+    className="h-8 w-auto"
+    priority
+  />
+</Link>
+      
 
       {/* Desktop nav links */}
       <ul className="hidden xl:flex gap-5 list-none">
