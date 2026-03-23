@@ -6,7 +6,7 @@ import { Toaster } from 'react-hot-toast'
 import { ENTITY } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'FitSOL — Compete in Verified Fitness Challenges on Solana',
+  title: 'FitSOL Protocol',
   description: 'The first on-chain fitness competition protocol on Solana. Stake FIT, enter GPS-verified challenges, win SOL from participant-funded prize pools.',
   keywords: ['FitSOL', 'Solana', 'fitness', 'crypto', 'compete-to-earn', 'DeFi'],
   openGraph: {
