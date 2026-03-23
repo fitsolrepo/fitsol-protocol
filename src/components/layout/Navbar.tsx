@@ -138,7 +138,7 @@ export function Navbar() {
     alt="FitSOL"
     width={140}
     height={40}
-    className="h-8 w-auto"
+    className="h-16 w-auto"
     priority
   />
 </Link>
