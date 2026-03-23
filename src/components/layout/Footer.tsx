@@ -15,7 +15,7 @@ export function Footer() {
     alt="FitSOL"
     width={140}
     height={40}
-    className="h-8 w-auto"
+    className="h-16 w-auto"
   />
 </div>
           <div className="font-mono text-xs text-green mb-1">{ENTITY.NAME} · {ENTITY.STATE}</div>
