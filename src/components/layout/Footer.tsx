@@ -1,6 +1,7 @@
 // src/components/layout/Footer.tsx
 import Link from 'next/link'
 import { ENTITY, SOCIAL_LINKS } from '@/lib/constants'
+import Image from 'next/image'
 
 export function Footer() {
   return (
@@ -8,7 +9,15 @@ export function Footer() {
       <div className="max-w-6xl mx-auto flex flex-wrap justify-between gap-8">
         {/* Brand */}
         <div>
-          <div className="font-syne font-black text-xl mb-1">Fit<span className="text-green">SOL</span></div>
+          <div className="mb-1 flex items-center">
+<Image
+    src="/logo.png"
+    alt="FitSOL"
+    width={140}
+    height={40}
+    className="h-8 w-auto"
+  />
+</div>
           <div className="font-mono text-xs text-green mb-1">{ENTITY.NAME} · {ENTITY.STATE}</div>
           <div className="font-mono text-xs text-muted">Audits pending · Beta software · Built on Solana</div>
         </div>
