@@ -1,0 +1,85 @@
+/* src/styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Default theme: Green ── */
+:root {
+  --accent:        #00e567;
+  --accent-mid:    rgba(0,229,103,0.27);
+  --accent-dim:    rgba(0,229,103,0.13);
+  --accent-sel:    rgba(0,229,103,0.22);
+  --accent-scroll: #1e2b1e;
+  --color-border:  #1e2b1e;
+  --color-amber:   #f5a623;
+  --color-danger:  #ff4444;
+  --color-muted:   #6b7a6b;
+}
+
+/* ── Blue theme ── */
+[data-theme="blue"] {
+  --accent:        #4f8ef7;
+  --accent-mid:    rgba(79,142,247,0.27);
+  --accent-dim:    rgba(79,142,247,0.13);
+  --accent-sel:    rgba(79,142,247,0.22);
+  --accent-scroll: #1e2a3b;
+  --color-border:  #1e2a3b;
+  --color-amber:   #a78bfa;
+  --color-danger:  #ff4444;
+  --color-muted:   #6b7a8b;
+}
+
+/* ── Purple theme ── */
+[data-theme="purple"] {
+  --accent:        #a855f7;
+  --accent-mid:    rgba(168,85,247,0.27);
+  --accent-dim:    rgba(168,85,247,0.13);
+  --accent-sel:    rgba(168,85,247,0.22);
+  --accent-scroll: #2a1e3b;
+  --color-border:  #2a1e3b;
+  --color-amber:   #f472b6;
+  --color-danger:  #ff4444;
+  --color-muted:   #7a6b8b;
+}
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html  { scroll-behavior: smooth; }
+  body  {
+    background: #080a08;
+    color: #f0f5f0;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--accent-sel); }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #080a08; }
+  ::-webkit-scrollbar-thumb { background: var(--accent-scroll); border-radius: 2px; }
+  .wallet-adapter-modal-wrapper { background: #0d110d !important; border: 1px solid #1e2b1e !important; }
+  .wallet-adapter-button { font-family: 'Syne', sans-serif !important; }
+  .wallet-adapter-modal-title { color: #f0f5f0 !important; }
+}
+
+@layer components {
+  .btn-primary     { @apply bg-green text-black font-syne font-bold text-sm px-6 py-3 rounded uppercase tracking-wider transition-opacity hover:opacity-85 cursor-pointer border-0 inline-block; }
+  .btn-outline     { @apply bg-transparent text-white font-syne font-semibold text-sm px-6 py-3 rounded uppercase tracking-wider border border-border hover:border-green transition-colors cursor-pointer inline-block no-underline; }
+  .btn-ghost-green { @apply bg-transparent text-green font-syne font-bold text-sm px-6 py-3 rounded uppercase tracking-wider border border-green-mid hover:bg-green-dim transition-colors cursor-pointer inline-block no-underline; }
+  .section-eyebrow { @apply text-green font-mono text-xs uppercase tracking-widest mb-3; }
+  .section-title   { @apply font-syne font-bold tracking-tight text-white mb-2; font-size: clamp(28px,3.5vw,44px); letter-spacing:-1.5px; }
+  .mono-label      { @apply font-mono text-xs text-muted uppercase tracking-widest; }
+  .pulse-dot       { @apply w-1.5 h-1.5 rounded-full bg-green animate-pulse2 flex-shrink-0; }
+  .input-field     { @apply w-full bg-black/40 border border-border rounded px-4 py-3 text-white font-mono focus:outline-none focus:border-green transition-colors; }
+  .table-row       { @apply flex justify-between items-center py-2.5 text-sm border-b border-border last:border-0; }
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
