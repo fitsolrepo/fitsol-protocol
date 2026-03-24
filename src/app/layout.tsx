@@ -4,6 +4,7 @@ import '@/styles/globals.css'
 import { WalletProviders } from '@/components/ui/WalletProviders'
 import { Toaster } from 'react-hot-toast'
 import { ENTITY } from '@/lib/constants'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
   title: 'FitSOL Protocol',
@@ -34,6 +35,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }}
           />
         </WalletProviders>
+
+        <Analytics />
       </body>
     </html>
   )
