@@ -167,7 +167,6 @@ export function HeroSection() {
           <div className="flex flex-wrap gap-3 mb-8">
             <a href="#contribute" className="btn-ghost-green">Join Founding Round ↗</a>
             <Link href="/whitepaper" className="btn-outline">Whitepaper</Link>
-            <a href={SOCIAL_LINKS.discord} target="_blank" rel="noopener noreferrer" className="btn-outline">Discord</a>
           </div>
           <div className="grid grid-cols-4 gap-2">
             {[['Entry','0.1 SOL'],['Stake','1K FIT'],['Settle','24–48h'],['Burn','50%']].map(([l,v])=>(

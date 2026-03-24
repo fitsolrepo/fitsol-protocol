@@ -45,7 +45,6 @@ export function Footer() {
           <div className="mono-label mb-3">Community</div>
           <div className="flex flex-col gap-2">
             <a href={SOCIAL_LINKS.twitter}  target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-green transition-colors no-underline">Twitter / X</a>
-            <a href={SOCIAL_LINKS.discord}  target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-green transition-colors no-underline">Discord</a>
             <a href={SOCIAL_LINKS.telegram} target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-green transition-colors no-underline">Telegram</a>
             <a href={SOCIAL_LINKS.github}   target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-green transition-colors no-underline">GitHub</a>
           </div>

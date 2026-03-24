@@ -166,7 +166,6 @@ export function Navbar() {
         <div className="hidden lg:flex gap-1.5">
           {[
             { t: 'Twitter',  h: SOCIAL_LINKS.twitter,  s: 'X'  },
-            { t: 'Discord',  h: SOCIAL_LINKS.discord,  s: 'DC' },
             { t: 'Telegram', h: SOCIAL_LINKS.telegram, s: 'TG' },
             { t: 'GitHub',   h: SOCIAL_LINKS.github,   s: 'GH' },
           ].map((s) => (

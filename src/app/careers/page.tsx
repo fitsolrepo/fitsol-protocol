@@ -435,14 +435,6 @@ export default function CareersPage() {
             <a href={`mailto:${APPLY_EMAIL}`} className="btn-ghost-green text-xs px-5 py-2.5">
               Email Us
             </a>
-            <a
-              href={SOCIAL_LINKS.discord}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-outline text-xs px-5 py-2.5"
-            >
-              Join Discord
-            </a>
           </div>
         </div>
 
