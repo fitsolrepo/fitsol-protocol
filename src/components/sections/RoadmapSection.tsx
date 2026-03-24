@@ -10,9 +10,9 @@ const MILESTONES = [
       { text: '2-of-3 Multisig treasury live',   done: true  },
       { text: 'Founding round opens',             done: true  },
       { text: 'Seed phase referral system live',  done: true  },
+      { text: 'GitHub open-sourced',              done: true },
       { text: 'Wyoming LLC registration',         done: false },
       { text: 'Founder KYC via Synaps.io',        done: false },
-      { text: 'GitHub open-sourced',              done: false },
     ],
   },
   {
