@@ -25,7 +25,7 @@ We are looking for a Head of Marketing to join as a founding team member. You wi
     responsibilities: [
       'Own the end-to-end go-to-market strategy for the FitSOL token launch (Q3 2026)',
       'Build and manage relationships with crypto and fitness influencers and KOLs',
-      'Grow FitSOL communities across Twitter, Discord, and Telegram from zero to 50,000+ members',
+      'Grow FitSOL communities across Twitter, and Telegram from zero to 50,000+ members',
       'Create and execute a weekly content calendar across all social channels',
       'Plan and execute paid and organic campaigns around the seed round and TGE',
       'Coordinate PR outreach to crypto and fitness media outlets',
@@ -39,7 +39,7 @@ We are looking for a Head of Marketing to join as a founding team member. You wi
       'Experience managing token launch campaigns or IDO/ICO marketing',
       'Strong written English — you will be writing content daily',
       'Comfortable working in a fast-moving early-stage environment',
-      'Deep understanding of Twitter, Discord, and Telegram community dynamics',
+      'Deep understanding of Twitter, and Telegram community dynamics',
     ],
     nice: [
       'Personal interest in fitness or health technology',
@@ -122,9 +122,9 @@ We are looking for a Fitness Partnerships Manager to build the gym partner netwo
     deadline: DEADLINE,
     about: `Community is the heartbeat of every successful crypto protocol. FitSOL will live or die by the quality of its community — the athletes, contributors, and supporters who believe in on-chain fitness.
 
-We are looking for a Community Manager who will be the daily face of FitSOL across Discord, Telegram, and Twitter. You will be the first person contributors and athletes interact with. You will set the tone, answer questions, resolve conflicts, and keep the community growing and engaged.`,
+We are looking for a Community Manager who will be the daily face of FitSOL across Telegram, and Twitter. You will be the first person contributors and athletes interact with. You will set the tone, answer questions, resolve conflicts, and keep the community growing and engaged.`,
     responsibilities: [
-      'Daily moderation and management of FitSOL Discord server and Telegram group',
+      'Daily moderation and management of FitSOL Telegram group',
       'Respond to community questions, support requests, and contributor inquiries within 24 hours',
       'Organize and host AMAs, community events, fitness challenges, and contests',
       'Monitor and report on community sentiment, common concerns, and feature requests weekly',
@@ -134,7 +134,7 @@ We are looking for a Community Manager who will be the daily face of FitSOL acro
     ],
     requirements: [
       '2+ years of community management experience in crypto, gaming, or technology',
-      'Hands-on experience moderating active Discord and Telegram communities',
+      'Hands-on experience moderating active Telegram communities',
       'Excellent written English — clear, friendly, and professional',
       'Calm and effective under pressure — crypto communities move fast and emotions run high',
       'Available to monitor communities across multiple time zones',
@@ -154,7 +154,7 @@ We are looking for a Community Manager who will be the daily face of FitSOL acro
     submit: [
       'Your CV / Resume (PDF preferred)',
       'A cover letter explaining your community management philosophy',
-      'Links to 1–2 Discord servers or Telegram groups you have managed',
+      'Links to 1–2 Telegram groups you have managed',
       'LinkedIn profile URL',
       'References: at least 2 professional references with contact details',
     ],

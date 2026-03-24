@@ -23,7 +23,7 @@ const MILESTONES = [
       { text: 'Smart contract developer hired',       done: false },
       { text: 'Staking contracts on Solana devnet',   done: false },
       { text: 'Challenge verification system built',  done: false },
-      { text: 'Discord grows to 1,000+ members',      done: false },
+      { text: 'Twitter grows to 1,000+ members',      done: false },
       { text: 'First gym partner LOI signed',         done: false },
     ],
   },

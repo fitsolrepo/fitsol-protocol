@@ -74,7 +74,7 @@ const FAQS = [
       },
       {
         q: 'When does the app launch?',
-        a: 'Mainnet launch is planned for Q3 2026. A public testnet beta is planned for June-July 2026 where you can test challenge participation without real funds at stake. Join the Discord to be notified when the beta opens.',
+        a: 'Mainnet launch is planned for Q3 2026. A public testnet beta is planned for June-July 2026 where you can test challenge participation without real funds at stake. Join the Twitter to be notified when the beta opens.',
       },
     ],
   },
